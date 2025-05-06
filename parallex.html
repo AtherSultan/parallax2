@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid blue; */
+        /* font-family: 'Courier New', Courier, monospace; */
+    }
+
+    .pic {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        position: relative;
+    }
+
+    .parall1 {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid green; */
+        /* position: relative; */
+    }
+
+    .manubar {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid blue; */
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .taglist {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid black; */
+    }
+
+    .taglist ul li {
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 30px;
+    }
+
+    .about {
+        width: max-content;
+        height: auto;
+        /* border: 1px solid blue; */
+        /* background-color: aqua; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+
+    }
+
+    .logo {
+        width: max-content;
+        height: auto;
+        /* border: 1px solid yellow; */
+        /* background-color: black; */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* position: relative; */
+    }
+
+    .logo h2 {
+        width: max-content;
+        height: auto;
+        background-color: black;
+        color: white;
+        font-size: 40px;
+        /* top: 5px; */
+        /* left: 10px; */
+        letter-spacing: .1cm;
+        /* padding-bottom: 10px; */
+    }
+
+    .logo1 {
+        width: max-content;
+        height: auto;
+        /* border: 1px solid yellow; */
+        /* background-color: blue; */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .logo1 h2 {
+        background-color: black;
+        color: white;
+        font-size: 40px;
+        /* top: 5px; */
+        /* left: 10px; */
+        letter-spacing: .1cm;
+        /* padding-bottom: 10px; */
+    }
+
+    /* ///////////////////////About me  */
+
+    .about1 {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        /* background-color: blueviolet; */
+        text-align: center;
+        /* margin-right: 10%; */
+    }
+
+    .about1 h5 {
+        font-size: 30px;
+    }
+
+    .about1 p {
+        font-size: 20px;
+    }
+
+    .mydetail {
+        width: 80%;
+        /* border: 1px solid gray; */
+        text-align: left;
+        /* margin-top: 10px; */
+        margin-left: 10%;
+    }
+
+    /* ///////////////////My pic///////////////// */
+    .picwork {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+    }
+
+    .mypic,
+    .mywork {
+        width: 49%;
+        height: auto;
+        /* border: 1px solid greenyellow; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .mypic {
+        text-align: center
+    }
+
+    .avatar {
+        width: 100%;
+        height: auto;
+
+
+    }
+
+    .mywork p {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid yellow; */
+        font-size: 19px;
+    }
+
+    /* //////////////////////////My work////////////////// */
+
+
+    .workreport {
+        width: 100%;
+        height: 560px;
+        /* border: 1px solid gold; */
+        /* background-color: yellowgreen; */
+        text-align: center;
+    }
+
+
+
+    .photography {
+        width: 100٪;
+        height: 330px;
+        /* border: 1px solid black; */
+        /* background-color: violet; */
+        position: relative;
+    }
+
+    .photography1 {
+        width: 100%;
+        height: 100px;
+        /* background-color: red; */
+        text-align: left;
+        letter-spacing: .2cm;
+        /* padding: 3px; */
+        margin-top: 10px;
+    }
+
+    .photography1 p {
+        margin-left: 10px;
+
+
+
+    }
+
+    .grayline {
+        width: 100%;
+        height: 40px;
+        background-color: gray;
+    }
+
+    .blackline {
+        width: 90%;
+        height: 40px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 1px;
+    }
+
+    .blackline p {
+        margin-top: 10px;
+    }
+
+    .blackline-1 {
+        width: 85%;
+    }
+
+    .blackline-2 {
+        width: 75%;
+    }
+
+    /* ////////////////////report/////////////// */
+    .totalreport {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        background-color: rgb(138, 136, 136);
+        /* margin-top: 50px; */
+        /* padding: 1px; */
+
+    }
+
+    .partner {
+        width: 23%;
+        height: auto;
+        /* border: 1px solid white; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .partner h2 {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .partner p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* /////////////////////////////////PORT 2///////////////////////// */
+
+    .port2 {
+        width: 100%;
+        height: 400px;
+        /* border: 1px solid red; */
+        background-image: url(./parallax2.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        padding: 1px;
+    }
+
+    .port1 {
+        width: max-content;
+        height: 40px;
+        /* border: 1px solid blue; */
+        margin: auto;
+        margin-top: 150px;
+
+
+    }
+
+    .port1 h1 {
+        /* width: max-content; */
+        color: white;
+        letter-spacing: .3cm;
+    }
+
+    /* ///////////WORK AREA//////////////////// */
+    .workarea {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+    }
+
+    .my-work {
+        width: 28%;
+        height: auto;
+        /* border: 1px solid blue; */
+        text-align: center;
+        margin-left: 40%;
+    }
+
+    .workpic {
+        width: 85%;
+        height: 70%;
+        /* border: 1px solid green; */
+        margin-left: 8%;
+    }
+
+    .picfirst {
+        width: 100%;
+        height: 50%;
+        /* border: 1px solid black; */
+
+    }
+
+    .workshop {
+        width: 24.7%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        /* border: 1px solid palevioletred; */
+
+    }
+
+    .load {
+        width: 15%;
+        height: 40px;
+        /* border: 1px solid red; */
+        border-radius: 10px;
+        /* background-color: gray; */
+        margin-top: 2%;
+        margin-left: 65%;
+        padding-bottom: 5px;
+
+
+    }
+
+    /* /////////////////////////Contact//////////////// */
+    .contact {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        text-align: center;
+        position: relative;
+        padding: 20px;
+    }
+
+    .parlla3 {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact h1 {
+        font-size: 40px;
+        color: white;
+        top: 50%;
+        left: 30%;
+        transform: translate(-30%, -30%);
+        position: absolute;
+        letter-spacing: 1cm;
+    }
+
+    /* /////////////////////form///////////////// */
+    .form {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid blue; */
+        /* padding: 1; */
+    }
+
+    .workplace {
+        width: 20%;
+        height: auto;
+        /* border: 1px solid red; */
+        text-align: center;
+        margin-left: 40%;
+    }
+
+    .workplace h3 {
+        font-size: 25px;
+    }
+
+    .location {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid green; */
+        /* margin-left: 10%; */
+        margin-top: 5%;
+    }
+
+    .map1 {
+        width: 40%;
+        height: 100%;
+        /* border: 1px solid yellow; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .data {
+        width: 59%;
+        height: 100%;
+        /* border: 1px solid yellow; */
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    .map2 {
+        width: 100%;
+        height: 60%;
+        /* border: 1px solid black; */
+    }
+
+    .data p {
+        margin-top: 1%;
+        margin-left: 2%;
+
+    }
+
+    .data1,
+    .data2 {
+        width: 45%;
+        height: 10%;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 3%;
+        margin-left: 2%;
+    }
+
+    .message {
+        width: 94%;
+        height: 10%;
+        margin-top: 3%;
+        margin-left: 2%;
+    }
+
+    .send1 {
+        width: 40%;
+        height: 15%;
+        /* background-color: black; */
+        color: white;
+        margin-top: 5%;
+        margin-left: 50%;
+    }
+
+    .footer {
+        width: 100%;
+        height: 30%;
+        background-color: gray;
+        text-align: center;
+        color: white;
+        /* padding: 1px; */
+    }
+
+    .top1 {
+        width: 20%;
+        height: 25%;
+        border: none;
+        background-color: rgb(199, 188, 188);
+        margin-top: 2%
+    }
+
+    .icon {
+        margin-top: 1%;
+        word-spacing: 5px;
+    }
+
+    .icon p {
+        margin-top: 1%;
+        word-spacing: 5px
+    }
+
+    .footer:hover.footer {
+        background-color: black;
+
+    }
+
+    /* /////////MEDIA//////////////////// */
+
+    @media screen and (max-width:600px) {
+
+        .about {
+            display: none !important;
+        }
+
+        .logo {
+            display: none;
+            opacity: 1;
+        }
+
+        .logo1 {
+            display: block;
+            opacity: 1;
+        }
+
+        .totalreport {
+            width: 100%;
+            height: auto;
+        }
+
+        .workshop {
+            width: 100%;
+
+        }
+
+        .partner {
+
+            display: block;
+            margin-left: 40%;
+        }
+
+        .mypic {
+            display: block;
+
+            width: 100%;
+        }
+
+        .mywork {
+            margin-left: 30%;
+
+
+        }
+    }
+</style>
+
+<body>
+    <div class="pic">
+        <img class="parall1" src="./parallax1.jpg" alt="">
+        <div class="manubar">
+            <div class="taglist">
+                <ul>
+                    <li>HOME</li>
+                    <li class="about">ABOUT</li>
+                    <li class="about">PORTFOLIO</li>
+                    <li class="about">CONTACT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo">
+            <h2>MY WEBSITE LOGO</h2>
+        </div>
+        <div class="logo1">
+            <h2>MY LOGO</h2>
+        </div>
+    </div>
+    <!-- ///////////////////about Me//////////////// -->
+    <div class="about1">
+        <h5>ABOUT ME</h5>
+        <p>I love Photography</p>
+        <p class="mydetail">We have created a fictional "personal" website/blog, and our fictional character is a hobby
+            photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+        </p>
+    </div>
+
+    <!-- ///////////////////My PIc////////////////////// -->
+
+    <div class="picwork">
+        <div class="mypic">
+            <h3>My Name</h3>
+            <img class="avatar" src="./avatar_hat.jpg" alt="">
+        </div>
+        <div class="mywork">
+            <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+
+            </p>
+        </div>
+    </div>
+    <!-- //////////////////MY work//////////////////////// -->
+    <div class="workreport">
+        <p>I m really goof at</p>
+        <div class="photography">
+            <div class="photography1">
+                <p><i class="fa-solid fa-camera"></i> Photography</p>
+                <div class="grayline">
+                    <div class="blackline">
+                        <p> 90%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="photography1">
+                <p> <i class="fa-solid fa-display"></i>Web Design</p>
+                <div class="grayline">
+                    <div class="blackline blackline-1">
+                        <p>85%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="photography1">
+                <p><i class="fa-regular fa-image"></i> Photo Shop</p>
+                <div class="grayline">
+                    <div class="blackline blackline-2">
+                        <p> 75%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ////////////////total report/////////////////// -->
+        <div class="totalreport">
+            <div class="partner">
+                <h2>14+</h2>
+                <p>Partners</p>
+            </div>
+            <div class="partner">
+                <h2>55+</h2>
+                <p>Project Done</p>
+            </div>
+            <div class="partner">
+                <h2>89+</h2>
+                <p>Happy clients</p>
+            </div>
+            <div class="partner">
+                <h2>150+</h2>
+                <p>Meetings</p>
+            </div>
+        </div>
+        <!-- ///////////////////////////Port 2//////////////// -->
+        <div class="port2">
+            <div class="port1">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+
+        <!-- /////////////////////////Work Area////////////// -->
+
+        <div class="workarea">
+            <div class="my-work">
+                <h3>My Work</h3>
+                <p>Here are some of my latest lorem work ipsum tipsum.
+                    Click on the images to make them bigger</p>
+            </div>
+            <div class="workpic">
+                <div class="picfirst">
+                    <div class="workshow">
+                        <img class="workshop" src="./p1.jpg" alt="">
+                        <img class="workshop" src="./p2.jpg" alt="">
+                        <img class="workshop" src="./p3.jpg" alt="">
+                        <img class="workshop" src="./p4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="workshow">
+                    <img class="workshop" src="./p5.jpg" alt="">
+                    <img class="workshop" src="./p6.jpg" alt="">
+                    <img class="workshop" src="./p7.jpg" alt="">
+                    <img class="workshop" src="./p8.jpg" alt="">
+                </div>
+            </div>
+            <button class="load">LOAD MORE</button>
+        </div>
+        <!-- ///////////////////CONTACT/////////////////////////////// -->
+
+        <div class="contact">
+            <img class="parlla3" src="./parallax3.jpg" alt="">
+            <h1>CONTACT</h1>
+        </div>
+        <!-- ////////////////////////Form/////////////////////// -->
+
+        <div class="form">
+            <div class="workplace">
+                <h3>WHERE I WORK</h3>
+                <p>I'd love your feedback!
+                </p>
+            </div>
+            <div class="location">
+                <div class="map1">
+                    <img class="map2" src="./map.jpg" alt="">
+                </div>
+                <div class="data">
+                    <p>Chicago, US</p>
+                    <p> Phone: +00 151515</p>
+                    <p> Email: mail@mail.com</p>
+                    <p>Swing by for a cup of , or leave me a note:</p>
+                    <input class="data1" type="text" placeholder="Name">
+                    <input class="data2" type="text" placeholder="Email">
+                    <input class="message" type="text" placeholder="Message">
+                    <button class="send1">SEND MESSAGE</button>
+                </div>
+            </div>
+        </div>
+        <!-- /////////////////////////footer///////////////// -->
+        <div class="footer">
+            <button class="top1"> To the top</button>
+            <div class="icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <p> Power by w3.css</p>
+            </div>
+
+        </div>
+
+
+
+</body>
+
+</html>
